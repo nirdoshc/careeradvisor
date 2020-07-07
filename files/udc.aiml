@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!-- Entry patterns for the bot -->
+<category>
+    <pattern>introtext</pattern>
+    <template>
+        Hello! I am Argon, your Computure Science career advisor. 
+                How can I help you today?
+    </template>
+</category>
+
+<category>
+    <pattern>firstmenu</pattern>
+    <template>
+        <button>
+            <text>Find a career that fits me the best</text>
+            <postback>find</postback>
+        </button>
+        <button>
+            <text>General career guidence</text>
+            <postback>general</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>hi</pattern>
+    <template>
+         <srai>introtext</srai>
+        <srai>firstmenu</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>hello</pattern>
+    <template><srai>hi</srai> </template>
+</category>
+
+<category>
+    <pattern>start</pattern>
+    <template><srai>hi</srai> </template>
+</category>
+
+<category>
+    <pattern>begin</pattern>
+    <template><srai>hi</srai> </template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <template>
+        What's that? Anyway... 
+        <srai>hi</srai>
+        </template>
+</category>
+
+<!-- General information category -->
+<category>
+    <pattern>general</pattern>
+    <template>
+        <ul>
+            <li>
+                <link>
+                    <text>Top careers in Computer Science</text>
+                    <url>https://www.computerscience.org/careers/</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                    <text>General interview tips</text>
+                    <url>https://www.thebalancecareers.com/top-interview-tips-2058577</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                    <text>Soft skills to help you excel at your job</text>
+                    <url>https://learning.linkedin.com/blog/top-skills/the-skills-companies-need-most-in-2020and-how-to-learn-them</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                    <text>Lern new technologies</text>
+                    <url>https://hackr.io/</url>
+                </link>
+            </li>
+        </ul>
+         <srai>retry</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>find</pattern>
+    <template>First, I will ask you some questions to understand you better.
+        <delay>1</delay>
+        Which of the following best describes you?
+        <button>
+            <text>I enjoy coding/programming</text>
+            <postback>coding</postback>
+        </button>
+        <button>
+            <text>Coding is tedious. I can not imagine myself doing it everyday.</text>
+            <postback>nocoding</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>coding</pattern>
+    <template>
+        Great! which of the following do you think you like the most?
+        <button>
+            <text>Complex system with multiple components and integration points</text>
+            <postback>softcar</postback>
+        </button>
+        <button>
+            <text>Visual presentation and design elements</text>
+            <postback>webcar</postback>
+        </button>
+        <button>
+            <text>Analyzing data and finding patterns in them</text>
+            <postback>datacar</postback>
+        </button>
+    </template>
+</category>
+
+
+<category>
+    <pattern>nocoding</pattern>
+    <template>
+        Cool! Do you like breaking things apart and finding out faults in a system?
+        <button>
+            <text>Absolutely</text>
+            <postback>secucar</postback>
+        </button>
+        <button>
+            <text>Not really</text>
+            <postback>sysman</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>sysman</pattern>
+    <template>
+       Technical communication, project management, and technological decision making are my strengths.
+        <button>
+            <text>Absolutely</text>
+            <postback>syscar</postback>
+        </button>
+        <button>
+            <text>Not really</text>
+            <postback>finalz</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>finalz</pattern>
+    <template>
+        You have complex interest and background.
+        <br></br><br></br>
+        I apologize I am not able to give you a specific career suggestion at the moment.
+        <br></br><br></br>
+        <srai>retry</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>retry</pattern>
+    <template>
+        <delay>1</delay>
+        <button>
+            <text>Retry</text>
+            <postback>firstmenu</postback>
+        </button>
+        <button>
+            <text>Quit</text>
+            <postback>quit</postback>
+        </button>
+        
+    </template>
+</category>
+
+<category>
+    <pattern>quit</pattern>
+    <template>Thank you! See you next time.</template>
+</category>
+
+</aiml>

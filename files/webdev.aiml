@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<category>
+    <pattern>webcar</pattern>
+    <template>
+        <delay>2</delay>
+        Looks like you are best suited for Web Developer career.
+        <br></br>
+        <br></br>
+        <link>
+            <text>Further detail</text>
+            <url>https://www.computerscience.org/careers/web-developer/</url>
+        </link>
+         <srai>retry</srai>
+    </template>
+</category>
+</aiml>
