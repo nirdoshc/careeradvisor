@@ -34,17 +34,17 @@
 
 <category>
     <pattern>hello</pattern>
-    <template><srai>hi</srai> </template>
+    <template><srai>hi</srai></template>
 </category>
 
 <category>
     <pattern>start</pattern>
-    <template><srai>hi</srai> </template>
+    <template><srai>hi</srai></template>
 </category>
 
 <category>
     <pattern>begin</pattern>
-    <template><srai>hi</srai> </template>
+    <template><srai>hi</srai></template>
 </category>
 
 <category>
